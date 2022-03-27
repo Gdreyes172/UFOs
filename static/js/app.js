@@ -1,22 +1,19 @@
 // from data.js
 const tableData = data;
 
-// get table references
+// Create the table and format referencing to our HTML file
 var tbody = d3.select("tbody");
 
+// Clear out any existing data
 function buildTable(data) {
-  // First, clear out any existing data
   tbody.html("");
 
-  // Next, loop through each object in the data
-  // and append a row and cells for each value in the row
+  // Next, loop through data and add to the body of table
   data.forEach((dataRow) => {
-    // Append a row to the table body
     let row = tbody.append("tr");
-
-    // Loop through each field in the dataRow and add
-    // each value as a table cell (td)
+    // loop that selects one object and assigns it to as one value per data row.
     Object.values(dataRow).forEach((val) => {
+    // appends the data into the table and then adds the values
       let cell = row.append("td");
       cell.text(val);
     });
