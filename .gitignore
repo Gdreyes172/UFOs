@@ -24,7 +24,7 @@ pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
-app_prac.js
+*.egg-info/
 MANIFEST
 
 # PyInstaller
